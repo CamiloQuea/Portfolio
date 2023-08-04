@@ -4,17 +4,13 @@
 	import '../app.css';
 </script>
 
-<div
-	class="main flex min-h-screen flex-col font-inter text-black dark:bg-neutral-950 dark:text-white"
->
-	<div
-		class="absolute right-0 top-0 flex h-full flex-col items-center justify-center gap-6 border-b p-3"
-	>
+<div class="main flex min-h-screen flex-col text-neutral-900 dark:bg-neutral-950 dark:text-white">
+	<div class="absolute bottom-0 right-0 top-0 flex flex-col justify-center p-3">
 		<nav class="flex flex-col items-center gap-5 rounded p-2">
 			<ul>
-				<li class="flex flex-col items-center justify-center justify-center gap-5">
-					<a href="#section-about-me"><User /></a>
-					<a href="#section-projects"><FolderKanban /></a>
+				<li class="flex flex-col items-center justify-center gap-5">
+					<a href="/"><User /></a>
+					<a href="/projects"><FolderKanban /></a>
 				</li>
 			</ul>
 			<div>
