@@ -1,1 +1,1 @@
-<h1>Hola! Soy Camilo Quea </h1>
+<h1 class="font-sans text-xl font-black">Hola! Soy Camilo Quea</h1>
