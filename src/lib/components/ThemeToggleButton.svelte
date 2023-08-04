@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { theme } from '$lib/stores/themeStore';
+	import { Moon, Sun } from 'lucide-svelte';
 
 	function toggle() {
 		const upcoming_theme = $theme === 'light' ? 'dark' : 'light';
@@ -9,8 +10,15 @@
 </script>
 
 <button
-	class="rounded border px-3 py-1"
+	class=" px-3 py-1"
 	on:click={() => {
 		toggle();
-	}}>{$theme}</button
+	}}
 >
+	{#if $theme === 'light'}
+		<Sun />
+	{/if}
+	{#if $theme === 'dark'}
+		<Moon />
+	{/if}
+</button>
