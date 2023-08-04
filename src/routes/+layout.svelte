@@ -1,23 +1,21 @@
 <script lang="ts">
-	import { theme } from '$lib/stores/themeStore';
+	import ThemeToggleButton from '$lib/components/ThemeToggleButton.svelte';
 	import '../app.css';
-
-	function toggle() {
-		const upcoming_theme = $theme === 'light' ? 'dark' : 'light';
-
-		$theme = upcoming_theme;
-	}
 </script>
 
-<div class="min-h-screen p-2 text-black dark:bg-neutral-950 dark:text-white">
-	<div class="ml-auto">
-		<button
-			class="rounded border px-3 py-1"
-			on:click={() => {
-				toggle();
-			}}>{$theme}</button
-		>
-	</div>
-
-	<slot />
+<div class="main min-h-screen text-black dark:bg-neutral-950 dark:text-white">
+	<nav class="sticky top-0 flex items-center gap-6 border-b p-3">
+		<ul class="ml-auto">
+			<li class="flex gap-5">
+				<a href="#section-about-me">About me</a>
+				<a href="#section-projects">Projects</a>
+			</li>
+		</ul>
+		<div>
+			<ThemeToggleButton />
+		</div>
+	</nav>
+	<main>
+		<slot />
+	</main>
 </div>
