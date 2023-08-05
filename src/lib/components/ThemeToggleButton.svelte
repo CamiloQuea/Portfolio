@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { theme } from '$lib/stores/themeStore';
-	import { Moon, Sun } from 'lucide-svelte';
+	import SunIcon from '~icons/lucide/sun';
+	import MoonIcon from '~icons/lucide/moon';
 
 	function toggle() {
 		const upcoming_theme = $theme === 'light' ? 'dark' : 'light';
@@ -10,15 +11,15 @@
 </script>
 
 <button
-	class=" px-3 py-1"
+	class={`${$$props.class} ${$theme === 'dark' ? 'text-yellow-500' : 'text-blue-800'}`}
 	on:click={() => {
 		toggle();
 	}}
 >
-	{#if $theme === 'light'}
-		<Sun />
-	{/if}
 	{#if $theme === 'dark'}
-		<Moon />
+		<SunIcon />
+	{/if}
+	{#if $theme === 'light'}
+		<MoonIcon />
 	{/if}
 </button>

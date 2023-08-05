@@ -15,8 +15,10 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.7",
 		"@commitlint/config-conventional": "^17.6.7",
+		"@iconify/json": "^2.2.98",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@sveltejs/vite-plugin-svelte": "^2.4.3",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.14",
@@ -33,11 +35,11 @@
 		"tailwindcss": "^3.3.3",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
+		"unplugin-icons": "^0.16.5",
 		"vite": "^4.4.2"
 	},
 	"type": "module",
 	"dependencies": {
-		"husky": "^8.0.3",
-		"lucide-svelte": "^0.263.0"
+		"husky": "^8.0.3"
 	}
 }

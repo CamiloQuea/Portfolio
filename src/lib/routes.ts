@@ -1,14 +1,15 @@
-import { FolderKanban, HomeIcon } from 'lucide-svelte';
+import UserIcon from '~icons/lucide/user';
+import FolderKabanIcon from '~icons/lucide/folder-kanban';
 
 export const routes = [
 	{
 		title: 'Home',
-		icon: HomeIcon,
+		icon: UserIcon,
 		path: '/'
 	},
 	{
 		title: 'Projects',
-		icon: FolderKanban,
+		icon: FolderKabanIcon,
 		path: '/projects'
 	}
 ];
