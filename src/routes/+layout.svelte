@@ -38,8 +38,8 @@
 	});
 </script>
 
-<div class=" text-neutral-900 dark:bg-neutral-950 dark:text-white">
-	<div class="absolute bottom-0 right-0 top-0 flex flex-col justify-center p-3">
+<div class=" -z-20 text-neutral-900 dark:bg-neutral-950 dark:text-white">
+	<div class="absolute bottom-0 right-0 top-0 z-50 flex flex-col justify-center p-3">
 		<nav class="flex flex-col items-center gap-5 rounded p-2">
 			<ul class="flex flex-col items-center justify-center gap-5">
 				{#each routes as route}
@@ -71,7 +71,7 @@
 	<main bind:this={mainContainer}>
 		{#key data.url.pathname}
 			<div
-				class="h-screen"
+				class="relative h-screen"
 				in:fly={{
 					y: -animationScrollPostion,
 					duration: transitionTimeMs,
