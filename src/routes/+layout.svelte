@@ -46,7 +46,20 @@
 
 <div class=" -z-20 text-neutral-900 dark:bg-neutral-950 dark:text-white">
 	<div class="absolute right-14 top-14 z-50">
-		<ul class="flex gap-8 text-2xl">
+		<ul class="flex flex-wrap justify-end gap-8 text-2xl">
+			<li>
+				<a href={contacts.github.url} target="_blank">
+					<GithubIcon class="text-neutral-700 dark:text-white" />
+				</a>
+			</li>
+			<li>
+				<a href={contacts.linkedin.url} target="_blank">
+					<LinkedinIcon class=" text-blue-700 dark:text-white" />
+				</a>
+			</li>
+			<li>
+				<ThemeToggleButton />
+			</li>
 			<li class="text-orange-800">
 				<span class="text text-xs sm:text-base">En construcción</span>
 				<svg
@@ -71,23 +84,10 @@
 					></svg
 				>
 			</li>
-			<li>
-				<a href={contacts.github.url} target="_blank">
-					<GithubIcon class="text-neutral-700 dark:text-white" />
-				</a>
-			</li>
-			<li>
-				<a href={contacts.linkedin.url} target="_blank">
-					<LinkedinIcon class=" text-blue-700 dark:text-white" />
-				</a>
-			</li>
-			<li>
-				<ThemeToggleButton />
-			</li>
 		</ul>
 	</div>
 
-	<div class="absolute bottom-0 right-0 top-0 mr-5 flex flex-col justify-center p-3">
+	<div class="absolute bottom-0 right-0 top-0 mr-0 flex flex-col justify-center p-3">
 		<nav class="flex flex-col items-center gap-5 rounded p-2">
 			<ul class="z-50 flex flex-col items-center justify-center gap-6 p-3 text-sm">
 				<li class=" opacity-30">
@@ -131,10 +131,10 @@
 		</nav>
 	</div>
 
-	<main bind:this={mainContainer}>
+	<main bind:this={mainContainer} class="min-w-0">
 		{#key data.url.pathname}
 			<div
-				class="relative h-screen"
+				class="relative flex h-screen min-w-0 flex-col items-center justify-center"
 				in:fly={{
 					y: -animationScrollPostion,
 					duration: transitionTimeMs,
