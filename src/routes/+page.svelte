@@ -18,4 +18,4 @@
 		</div>
 	</div>
 </section>
-<MainBlob class=" absolute -left-[75rem] top-0 z-0 w-[150rem] fill-blue-700 dark:fill-blue-800" />
+<!-- <MainBlob class=" absolute -left-[75rem] top-0 z-0 w-[150rem] fill-blue-700 dark:fill-blue-800" /> -->
